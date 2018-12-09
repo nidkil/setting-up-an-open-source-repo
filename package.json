@@ -36,7 +36,8 @@
   "homepage": "https://github.com/nidkil/setting-up-an-open-source-repo#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "commit": "git cz",
+    "cz:commit": "git cz",
+    "cz:retry": "git cz --retry",
     "commitlint": "commitlint",
     "commitlint:last": "commitlint --edit",
     "git:first": "git rev-list HEAD | tail -n 1",
