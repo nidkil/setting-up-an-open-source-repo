@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./docs/_media/setting-up-an-open-source-repo-logo.png" alt="Setting Up an Open Source Repository logo" width="200"/>
+  <img src="./docs/_media/setup-os-repo-logo.png" alt="Setting Up an Open Source Repository logo" width="200"/>
 </p>
 <p align="center" style="font-size: 2.0em"><b>Setting Up an Open Source Repository</b></p>
 <p align="center" style="font-size: 1.0em">Professionalizing and standardizing the way of working for (open source) repositories</p>
@@ -21,13 +21,13 @@ Enjoy!
 
 # Links
 
-- [The guide](https://setting-up-an-open-source-repo.nidkil.com)
+- [The guide](https://setup-os-repo.nidkil.com)
 
 # Contributing
 
 We welcome pull requests! What follows is the simplified version of the contribution process, please read [here](./CONTRIBUTING.md) to fully understand our contribution policy and [here](./CODE-OF-CONDUCT.md) to understand our code of conduct.
 
-1. Fork the repository [here](https://github.com/nidkil/setting-up-an-open-source-repo)!
+1. Fork the repository [here](https://github.com/nidkil/setup-os-repo)!
 2. Create your feature branch: `git checkout -b my-new-feature`
 3. If relevant, don't forget to add your tests and comment your code
 4. Commit your changes: `npm run commit`
@@ -37,6 +37,6 @@ We welcome pull requests! What follows is the simplified version of the contribu
 # Author
 
 **nidkil** © [nidkil](https://github.com/nidkil), released under the [MIT](LICENSE.md) license.
-Authored and maintained by nidkil with help from [contributors](https://github.com/nidkil/setting-up-an-open-source-repo/contributors).
+Authored and maintained by nidkil with help from [contributors](https://github.com/nidkil/setup-os-repo/contributors).
 
 > [Website](https://nidkil.com) · GitHub [@nidkil](https://github.com/nidkil) · Twitter [@nidkil](https://twitter.com/nidkil)

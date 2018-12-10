@@ -20,7 +20,7 @@
    $ eslint file1.js file2.js
    ```
 
-   Or directory like this. The quotes and '**' indicate that glob must be used, in other words it will recursively iterate all directories and lint all files. 
+   Or directory like this. The quotes and `**` indicate that glob must be used, in other words it will recursively iterate all directories and lint all files. 
 
    ```bash
    $ eslint "src/**"
@@ -32,7 +32,7 @@
    {
      "scripts": {
        "lint": "eslint -c .eslintrc.json --format codeframe bin src tests",
-       "lint:fix": "eslint --fix -c .eslintrc.json--format codeframe bin src tests"
+       "lint:fix": "eslint --fix -c .eslintrc.json --format codeframe bin src tests"
      }
    }
    ```
@@ -86,14 +86,23 @@
    
    You can find more information about ESLint rules [here](https://eslint.org/docs/rules/).
 
-6. Add ESLint to the git pre commit hook in `.huskyrc.json`, so that changes are linted before they are committed.  
+## Lint before committing
+
+Now lets make sure users cannot commit without there code being linted by ESLint. 
+
+1. In the project root directory install `husky`.
+
+   ```bash
+   $ npm install --save-dev husky
+   ```
+
+2. Add ESLint to the git pre commit hook in `.huskyrc.json`, so that changes are linted before they are committed.  
   
    ```json
    {
      "husky": {  
        "hooks": {  
-         "pre-commit": "npm test && npm run lint:fix",  
-         "commit-msg": "commitlint"  
+         "pre-commit": "npm run lint:fix"
        }
      }
    }

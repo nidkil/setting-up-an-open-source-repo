@@ -60,7 +60,8 @@ Check out [this](https://github.com/nidkil/setting-up-an-open-source-repo) repos
 
 Most of the entries speak for them selves. Just to point out somethings entries that are not in the above example or require additional explanation:
 - **private** - If you add `private` and set the value to `true`, then NPM will refuse to publish it. Useful when you only want to publish to GitHub and not NPM. Then there is no chance of accidentally publishing it to NPM when you automate the publishing process.
-- **version** - Is the version number of a particular release that should follow the form `major.minor.patch` format. It should initially be set to `0.0.0`. It will be incremented automatically every time we publish a new version to GitHub and/or NPM. More on this later. As explained in [Recommended workflow](sections/2-way-of-working/recommended-workflow.md) incrementing or bumping the version number follows the [Semantic Versioning](https://semver.org/) standard. 
+- **version** - Is the version number of a particular release that should follow the form `major.minor.patch` format. It should initially be set to `0.0.0`. It will be incremented automatically every time we publish a new version to GitHub and/or NPM. More on this later. As explained in [Recommended workflow](sections/2-way-of-working/recommended-workflow.md) incrementing or bumping the version number follows the [Semantic Versioning](https://semver.org/) standard.
+- **engines** - This section specifies the node version that the package requires. These settings are advisory. If you want to force the minimum version then you also need to add `engineStrict` and set it to `true`.
   
 ## Git
 
@@ -83,3 +84,14 @@ $ git remote add origin https://github.com/<username>/<repository-name>.git
 Now you are all ready to start committing and publishing to GitHub. Don't start yet, we will be adding additional tools to streamline and standardize this process.
 
 > **Note** I will soon provide separate guide with all kinds of useful Git commands you incidentally need and find yourself googling for. More on that later.
+
+Okay, lets add a `.gitignore` file in the root directory of the project and add the following contents.
+
+```bash
+node_modules/
+.idea/
+.env.local
+package-lock.json
+```
+
+Feel free to add other files that git must ignore.

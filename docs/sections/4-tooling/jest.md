@@ -62,7 +62,7 @@ There are many test frameworks out there, I personally prefer [Jest](https://jes
    Create a `test` directory in the main project directory.
    
    ```bash
-   mkdir test
+   mkdir tests
    ```
    
    In the `test` directory create a `.eslintrc.json` file specifically for the tests and add the following contents.
@@ -72,7 +72,7 @@ There are many test frameworks out there, I personally prefer [Jest](https://jes
      "extends": ["plugin:jest/recommended"],
      "overrides": [
        {
-         "files": [ "test/*.js" ],
+         "files": [ "tests/*.js" ],
          "plugins": ["jest"],
          "rules": {
            "jest/no-disabled-tests": "warn",
@@ -87,7 +87,19 @@ There are many test frameworks out there, I personally prefer [Jest](https://jes
    ```
 
    This makes use of eslint's  cascading configuration. The configuration cascade works by using the closest .eslintrc file to the file being linted as the highest priority, then any configuration files in the parent directory, and so on.
-      
+
+6. Update pre commit hooks in `.huskyrc.json`, so that test are also run before committing.
+
+   ```json
+   {
+     "husky": {  
+       "hooks": {  
+         "pre-commit": "npm test && npm run lint:check && npm run lint:fix"
+       }
+     }
+   }
+   ```
+
 **Webstorm tip**
 
 Getting Webstorm to recognize aliases

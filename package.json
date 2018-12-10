@@ -1,5 +1,5 @@
 {
-  "name": "setting-up-an-open-source-repo",
+  "name": "setup-os-repo",
   "version": "0.1.0",
   "description": "Professionalizing and standardizing the way of working with (open source) repositories",
   "author": "nidkil <info@nidkil.com>",
@@ -28,12 +28,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nidkil/setting-up-an-open-source-repo.git"
+    "url": "git+https://github.com/nidkil/setup-os-repo.git"
   },
   "bugs": {
-    "url": "https://github.com/nidkil/setting-up-an-open-source-repo/issues"
+    "url": "https://github.com/nidkil/setup-os-repo/issues"
   },
-  "homepage": "https://github.com/nidkil/setting-up-an-open-source-repo#readme",
+  "homepage": "https://github.com/nidkil/setup-os-repo#readme",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "cz:commit": "git cz",

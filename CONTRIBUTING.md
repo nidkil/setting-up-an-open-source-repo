@@ -27,8 +27,8 @@ Please put some effort in requesting a new feature. If someone else is going to 
 
 In case you've encountered a bug, please make sure:
 
-* You are using the [latest version](https://github.com/nidkil/setting-up-an-open-source-repo/releases).
-* You have read the [documentation](https://github.com/nidkil/setting-up-an-open-source-repo/blob/master/README.md) first, and double-checked your configuration.
+* You are using the [latest version](https://github.com/nidkil/setup-os-repo/releases).
+* You have read the [documentation](https://github.com/nidkil/setup-os-repo/blob/master/README.md) first, and double-checked your configuration.
 * You have acknowledged from `--verbose` and `--debug` the errors are likely a bug in this project (and not coming from your environment or a dependency of this project).
 * In your issue description, please include:
 	* What you expected to see, and what happened instead.

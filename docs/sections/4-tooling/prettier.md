@@ -75,7 +75,7 @@ An additional requirement is that we want everything to work for [Vue single fil
    ```json
    {
      "scripts": {
-       "pre-commit": "npm run lint-check && npm run lint"
+       "pre-commit": "npm run lint:check && npm run lint:fix"
      }
    }
    ```

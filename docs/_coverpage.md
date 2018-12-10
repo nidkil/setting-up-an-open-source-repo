@@ -1,4 +1,4 @@
-![logo](./_media/setting-up-an-open-source-repo-logo.png)
+![logo](./_media/setup-os-repo-logo.png)
 
 # Setting Up an Open Source Repository <small>0.0.0</small>
 
@@ -12,5 +12,5 @@
 - Automate the release process to GitHub and NPM
 - Professionalize documentation 
 
-[GitHub](https://github.com/nidkil/setting-up-an-open-source-repo/)
+[GitHub](https://github.com/nidkil/setup-os-repo/)
 [Getting started](#welcome)

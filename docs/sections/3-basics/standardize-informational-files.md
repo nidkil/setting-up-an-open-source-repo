@@ -8,4 +8,4 @@ To help others understand the project, the contribution guidelines and code of c
 4. **LICENSE.md** - The license the project is released under. Very important for people that want to use your project. For more information about open source license types, checkout this [website](https://choosealicense.com/). Also checkout [GitHub licensing information](https://help.github.com/articles/licensing-a-repository/) about choosing the right license for your repository. It also contains the license keywords you can use in the `package.json` file.  
 5. **[EditorConfig](http://EditorConfig.org)** - Standardize a consistent coding styles between different editors and IDEs.
 
-Examples of these files can be found in [this](https://github.com/nidkil/setting-up-an-open-source-repo) repository. Feel free to copy and change them to your likings :-)
+Examples of these files can be found in [this](https://github.com/nidkil/setup-os-repo) repository. Feel free to copy and change them to your likings :-)

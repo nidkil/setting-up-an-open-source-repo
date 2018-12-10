@@ -7,6 +7,7 @@ What's next?
  - [ ] Continuous Integration (CI) and Continuous Deployment (CD).
  - [ ] CLI demo generated with [svg-term-cli](https://github.com/marionebl/svg-term-cli).
  - [ ] Add babel instructions.
+ - [ ] [Bili](https://github.com/egoist/bili) is a zero-config library bundler that uses [Rollup](https://github.com/rollup/rollup) under the hood. A module bundler compiles small pieces of code into something larger and more complex, such as a library or application.
  - [ ] Multi repository setup with [Lerna](https://lernajs.io/).
  - [x] Add [Prettier](https://prettier.io) with support for Vue standard.
  - [x] Add eslint instructions.

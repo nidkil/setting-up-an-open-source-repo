@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./_media/setting-up-an-open-source-repo-logo.png" alt="Setting Up an Open Source Repository logo" width="200"/>
+  <img src="./_media/setup-os-repo-logo.png" alt="Setting Up an Open Source Repository logo" width="200"/>
 </p>
 <p align="center" style="font-size: 2.0em"><b>Setting Up an Open Source Repository</b></p>
 <p align="center" style="font-size: 1.0em">Professionalizing and standardizing the way of working for (open source) repositories</p>
@@ -16,4 +16,4 @@ This is a living document. I will continue to add to this document as needed and
 
 Enjoy!
 
-Go to the [Guide](https://setting-up-an-open-source-repo.nidkil.com).
+Go to the [Guide](https://setup-os-repo.nidkil.com).
