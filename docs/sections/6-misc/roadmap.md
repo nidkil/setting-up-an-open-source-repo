@@ -8,6 +8,8 @@ What's next?
  - [ ] CLI demo generated with [svg-term-cli](https://github.com/marionebl/svg-term-cli).
  - [ ] Add babel instructions.
  - [ ] [Bili](https://github.com/egoist/bili) is a zero-config library bundler that uses [Rollup](https://github.com/rollup/rollup) under the hood. A module bundler compiles small pieces of code into something larger and more complex, such as a library or application.
+ - [ ] [Travis CI](https://travis-ci.org/) to test and deploy with confidence. Easily sync your GitHub projects with Travis CI and you’ll be testing your code in minutes!
+ - [ ] [Greenkeeper](https://greenkeeper.io) sits between npm and GitHub, observing all of the modules you depend on. When they get updated, your project gets a new branch with that update. Your CI tests kick in, and we watch them to see whether they pass.
  - [ ] Multi repository setup with [Lerna](https://lernajs.io/).
  - [x] Add [Prettier](https://prettier.io) with support for Vue standard.
  - [x] Add eslint instructions.
