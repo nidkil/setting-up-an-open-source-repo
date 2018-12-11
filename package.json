@@ -1,6 +1,6 @@
 {
   "name": "setup-os-repo",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Professionalizing and standardizing the way of working with (open source) repositories",
   "author": "nidkil <info@nidkil.com>",
   "license": "MIT",
