@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "setup-os-repo",
   "version": "1.0.1",
   "description": "Professionalizing and standardizing the way of working with (open source) repositories",
