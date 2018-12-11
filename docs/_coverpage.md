@@ -1,6 +1,6 @@
 ![logo](./_media/setup-os-repo-logo.png)
 
-# Setting Up an Open Source Repository <small>1.0.1</small>
+# Setting Up an Open Source Repository <small>1.0.2</small>
 
 > Professionalizing and standardizing the way of working with (open source) repositories
 

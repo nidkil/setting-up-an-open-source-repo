@@ -1,3 +1,12 @@
+## [1.0.2](https://github.com/nidkil/setup-os-repo/compare/v1.0.1...v1.0.2) (2018-12-11)
+
+
+### Bug Fixes
+
+* **Bili:** added Bili to the sidebar ([7ad1c20](https://github.com/nidkil/setup-os-repo/commit/7ad1c20))
+
+
+
 ## [1.0.1](https://github.com/nidkil/setup-os-repo/compare/v1.0.0...v1.0.1) (2018-12-11)
 
 
