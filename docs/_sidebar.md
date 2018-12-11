@@ -17,25 +17,26 @@
 - Tooling
 
     - Code quality and formatting
-    
+
         - [ESLint](sections/4-tooling/eslint.md)
         - [Prettier](sections/4-tooling/prettier.md)
-        
+
     - Automated testing
-    
+
         - [Jest](sections/4-tooling/jest.md)
-        
+
     - Commit messages
-    
+
         - [commitizen](sections/4-tooling/commitizen.md)
         - [commitlint](sections/4-tooling/commitlint.md)
 
     - Releasing
 
+        - [Bili](sections/4-tooling/bili.md)
         - [Release It!](sections/4-tooling/release-it.md)
-    
+
     - Documentation
-    
+
         - [docsify](sections/4-tooling/docsify.md)
         - [JSDoc](sections/4-tooling/jsdoc.md)
 
@@ -43,7 +44,7 @@
 
   - [Logo](sections/5-cherry-on-the-cake/logo.md)
   - [Badges](sections/5-cherry-on-the-cake/badges.md)
-  
+
 - Miscellaneous
 
   - [Roadmap](sections/6-misc/roadmap.md)

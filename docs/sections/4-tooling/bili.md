@@ -7,43 +7,45 @@ Setting up and configuration is ridiculously easy. The documentation can be foun
 1. Install Bili.
 
     ```bash
-    $ npm install --save-dev bili    
+    $ npm install --save-dev bili
     ```
 
-2. Create a `.bili.config.json` configuration file in the root directory of the project with the following contents.
+2. Create a `bili.config.json` configuration file in the root directory of the project with the following contents.
 
     ```json
     {
-      "input": "<main-entry-point>",
-      "outDir": "./dist",
-      "format": ["es", "umd"],
+      "input": "<main-entry-point-js>",
+      "outDir": "<directory-to-place-generated-files>",
+      "format": [<formats-to-generate>],
       "moduleName": "<name-of-your-module>",
-      "filename": "<name-of-your-module>",
+      "name": "<name-of-your-module>",
+      "filename": "[name][suffix].js",
       "banner": true,
       "target": "<node|browser>"
     }
     ```
 
-    This is an example `.bili.config.json` file.
-    
+    This is an example `bili.config.json` file.
+
     ```json
     {
       "input": "./src/use-pkg-version-cli.js",
       "outDir": "./dist",
-      "format": ["es", "umd"],
+      "format": ["es", "umd", "umd-min", "cjs"],
       "moduleName": "use-pkg-version",
-      "filename": "use-pkg-version",
+      "name": "use-pkg-version",
+      "filename": "[name][suffix].js",
       "banner": true,
       "target": "node"
     }
     ```
 
-3. Add an entry to `scripts` in the `package.json` file.
+3. Add an entry to the `scripts` section in the `package.json` file.
 
    ```json
    {
      "scripts": {
-       "build": "bili --config .bili.config.json"
+       "build": "rm -rf dist && bili --config bili.config.json"
      }
    }
    ```
