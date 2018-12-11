@@ -65,21 +65,21 @@ There are many test frameworks out there, I personally prefer [Jest](https://jes
    mkdir tests
    ```
    
-   In the `test` directory create a `.eslintrc.json` file specifically for the tests and add the following contents.
+   In the `test` directory create a `.eslintrc.js` file specifically for the tests and add the following contents.
   
-   ```json
-   {
-     "extends": ["plugin:jest/recommended"],
-     "overrides": [
+   ```js
+   module.exports = {
+     extends: ['plugin:jest/recommended'],
+     overrides: [
        {
-         "files": [ "tests/*.js" ],
-         "plugins": ["jest"],
-         "rules": {
-           "jest/no-disabled-tests": "warn",
-           "jest/no-focused-tests": "error",
-           "jest/no-identical-title": "error",
-           "jest/prefer-to-have-length": "warn",
-           "jest/valid-expect": "error"
+         files: ['tests/*.js'],
+         plugins: ['jest'],
+         rules: {
+           'jest/no-disabled-tests': 'warn',
+           'jest/no-focused-tests': 'error',
+           'jest/no-identical-title': 'error',
+           'jest/prefer-to-have-length': 'warn',
+           'jest/valid-expect': 'error'
          }
        }
      ]
@@ -106,14 +106,14 @@ Getting Webstorm to recognize aliases
                  
 If you setup aliases for Jest Webstorm will not understand them by default. The trick to help Webstorm understand them is to define a webpack configuration file (`webpack.config.js`) that defines the same aliases.
 
-```                 
+```js
 module.exports = {
  resolve: {
    alias: {
      '@': require('path').resolve(__dirname, 'src')
    }
  }
-};
+}
 ```
- 
+
 And voila like magic Webstorm now understands the aliases and you can navigate them with ctrl+b.

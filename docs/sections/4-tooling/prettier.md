@@ -24,23 +24,23 @@ An additional requirement is that we want everything to work for [Vue single fil
    
    With `eslint-plugin-prettier` we add Prettier as an ESLint rule.
 
-3. Add `prettier` to `.eslintrc.json` file.
+3. Add `prettier` to `.eslintrc.js` file.
 
-   ```json
-    {
-      "extends": ["prettier", "prettier/standard"],
-      "plugins": ["prettier"],
-      "rules": {
-        "prettier/prettier": "error"
+   ```js
+    module.exports = {
+      extends: ['prettier', 'prettier/standard'],
+      plugins: ['prettier'],
+      rules: {
+        'prettier/prettier': 'error'
       }
     }
    ```
 
     Or in a more concise way.
     
-   ```json
-    {
-      "extends": ["plugin:prettier/recommended"]
+   ```js
+    module.exports = {
+      extends: ['plugin:prettier/recommended']
     }
    ```
 
@@ -65,7 +65,7 @@ An additional requirement is that we want everything to work for [Vue single fil
    ```json
    {
      "scripts": {
-       "lint:check": "eslint --print-config .eslintrc.json | eslint-config-prettier-check"
+       "lint:check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
      }
    }
    ```
@@ -92,7 +92,7 @@ module.exports = {
   env: {
     node: true
   },
-  'extends': [
+  extends: [
     'plugin:vue/essential',
     '@vue/standard'
   ],
@@ -114,7 +114,7 @@ module.exports = {
   env: {
     node: true
   },
-  'extends': [
+  extends: [
     `prettier`,
     `prettier/standard`,
     'plugin:vue/essential',
@@ -123,7 +123,7 @@ module.exports = {
   plugins: ['vue', 'prettier'],
   rules: {
     'prettier/prettier': 'error',
-    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   },
   parserOptions: {
