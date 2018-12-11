@@ -9,7 +9,7 @@
   "beforeChangelogCommand": "conventional-changelog -p angular -i CHANGELOG.md -s",
   "changelogCommand": "conventional-changelog -p angular | tail -n +3",
   "safeBump": false,
-  "buildCommand": "npm run git:last",
+  "buildCommand": "npm run build",
   "src": {
     "tagName": "v${version}",
     "tagAnnotation": "Release v${version}"
