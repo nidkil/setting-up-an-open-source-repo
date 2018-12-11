@@ -30,15 +30,18 @@
         - [commitizen](sections/4-tooling/commitizen.md)
         - [commitlint](sections/4-tooling/commitlint.md)
 
-    - Releasing
-
-        - [Bili](sections/4-tooling/bili.md)
-        - [Release It!](sections/4-tooling/release-it.md)
-
     - Documentation
 
         - [docsify](sections/4-tooling/docsify.md)
         - [JSDoc](sections/4-tooling/jsdoc.md)
+
+    - Build & packaging
+
+        - [Bili](sections/4-tooling/bili.md)
+
+    - Releasing
+
+        - [Release It!](sections/4-tooling/release-it.md)
 
 - Cherry on the cake
 
