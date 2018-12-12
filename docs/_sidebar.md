@@ -52,4 +52,5 @@
 
   - [Roadmap](sections/6-misc/roadmap.md)
   - [Contributing](sections/6-misc/contributing.md)
+  - [Brag about it](sections/6-misc/brag-about-it.md)
   - [Author](sections/6-misc/author.md)
