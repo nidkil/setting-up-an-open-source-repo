@@ -1,4 +1,4 @@
-# commitlint 
+# commitlint
 
 The `commitlint` tool is a linter that lint's commit messages to enforce the conventional commit standard. We want to check that commit messages comply before they are committed. We do this using the git pre-commit hook using `husky`. Let's install `husky` and `commitlint` and configure them.
 
@@ -12,6 +12,14 @@ The `commitlint` tool is a linter that lint's commit messages to enforce the con
 
     ```bash
    $ npm install --save-dev @commitlint/config-conventional @commitlint/cli
+   ```
+
+3. Add a `commitlint.config.js` file with the following contents that tells commitlint which ruleset to use..
+
+   ```js
+   module.exports = {
+     extends: ['@commitlint/config-conventional']
+   }
    ```
 
 3. Now add the `.huskyrc.json` file to configure `husky` in the project's root directory, so that it knows we want to run `commitlint` before committing to validate that commit messages conform with the conventional commit message standard.
@@ -40,8 +48,8 @@ The `commitlint` tool is a linter that lint's commit messages to enforce the con
    ```
 
    Now we can easily run `commitlint` using `npm run commitlint` and pass it commandline arguments using the double dash (--).
-   
-   For the other commands please refer to `Tips & tricks` that follows. 
+
+   For the other commands please refer to `Tips & tricks` that follows.
 
 ### Tips & tricks
 
