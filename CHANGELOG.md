@@ -1,3 +1,13 @@
+## [1.0.3](https://github.com/nidkil/setup-os-repo/compare/v1.0.2...v1.0.3) (2018-12-12)
+
+
+### Bug Fixes
+
+* **commitlint:** added missing config ([f2a6691](https://github.com/nidkil/setup-os-repo/commit/f2a6691))
+* **release-it:** made commit message conventional commit compliant ([5c6464b](https://github.com/nidkil/setup-os-repo/commit/5c6464b))
+
+
+
 ## [1.0.2](https://github.com/nidkil/setup-os-repo/compare/v1.0.1...v1.0.2) (2018-12-11)
 
 
