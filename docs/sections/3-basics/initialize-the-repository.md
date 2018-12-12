@@ -48,10 +48,13 @@ After the initial version has been initialized, ensure the `package.json` file c
       "node": ">=6"
     },
     "dependencies": {
-      <runtime dependencies>
+      <included runtime dependencies>
     },
     "devDependencies": {
       <development dependencies>
+    },
+    "peerDependencies": {
+      <excluded runtime dependencies>
     }
   }
 ```
@@ -69,6 +72,9 @@ Most of the entries speak for them selves. Just to point out somethings entries 
 - **unpkg** - This is the UMD build. It is used to distribute the library through the [unpkg](http://unpkg.org/) CDN [1]. For NPM package authors, NPM relieves them from the burden of publishing their code to a CDN in addition to the NPM registry. All the package author needs to do is include the UMD build in their `package.json` file.
 - **scripts** - Commands that can be called using `npm run <command>` or `yarn <command>`.
 - **engines** - This section specifies the node version that the package requires. These settings are advisory. If you want to force the minimum version then you also need to add `engineStrict` and set it to `true`.
+- **dependencies** - Are packages that are installed when running `npm init`.
+- **devDependencies** - Are also packages that are installed when running `npm init`, unless the `--production` flag is passed.
+- **peerDependencies** - A warning message is shown if missing when running `npm init`. You have to solve these dependencies yourself. When developing for example a plugin the framework you are developing it for can be a peerDependencies as it will be installed as the plugin will be used with the framework.
 
 In addition the `package.json` file can contain sections for other tools. For example the `husky` configuration can either be in a separate configuration file or in the `package.json` file in a section named `husky`.
 
