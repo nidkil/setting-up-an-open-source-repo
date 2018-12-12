@@ -14,7 +14,7 @@ The `commitlint` tool is a linter that lint's commit messages to enforce the con
    $ npm install --save-dev @commitlint/config-conventional @commitlint/cli
    ```
 
-3. Add a `commitlint.config.js` file with the following contents that tells commitlint which ruleset to use..
+3. Add a `commitlint.config.js` file with the following contents that tells commitlint which ruleset to use.
 
    ```js
    module.exports = {
