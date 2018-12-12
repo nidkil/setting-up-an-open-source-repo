@@ -105,10 +105,16 @@ Now you are all ready to start committing and publishing to GitHub. Don't start 
 Okay, lets add a `.gitignore` file in the root directory of the project and add the following contents.
 
 ```bash
-node_modules/
-.idea/
+.DS_Store
+node_modules
+dist
+
+# local env files
 .env.local
-package-lock.json
+.env.*.local
+
+# Editor directories and files
+.idea
 ```
 
 Feel free to add other files that git must ignore.
