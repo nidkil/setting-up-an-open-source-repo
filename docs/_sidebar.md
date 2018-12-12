@@ -32,6 +32,7 @@
 
     - Documentation
 
+        - [markdown-toc](sections/4-tooling/markdown-toc.md)
         - [docsify](sections/4-tooling/docsify.md)
         - [JSDoc](sections/4-tooling/jsdoc.md)
 
