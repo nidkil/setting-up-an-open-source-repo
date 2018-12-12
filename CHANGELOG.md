@@ -1,3 +1,13 @@
+# [1.1.0](https://github.com/nidkil/setup-os-repo/compare/v1.0.3...v1.1.0) (2018-12-12)
+
+
+### Features
+
+* **docsify:** autoscroll to top of page ([7673e86](https://github.com/nidkil/setup-os-repo/commit/7673e86))
+* **package.json:** added peerDependencies to package.json file ([8e81c42](https://github.com/nidkil/setup-os-repo/commit/8e81c42))
+
+
+
 ## [1.0.3](https://github.com/nidkil/setup-os-repo/compare/v1.0.2...v1.0.3) (2018-12-12)
 
 
