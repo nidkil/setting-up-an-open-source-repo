@@ -149,12 +149,7 @@ If you have ever done this process manually, then you know what a big deal and t
     }
     ```
 
-    Now release-it does all the magic:
-    - Building a new release
-    - Publishing to GitHub
-    - Publishing to NPM
-
-    O yeah!
+    Now release-it does all the magic: building a new release, publishing it to GitHub and NPM! O yeah!
 
 8. Release it!
 

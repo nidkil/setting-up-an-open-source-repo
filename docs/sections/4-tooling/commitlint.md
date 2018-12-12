@@ -70,7 +70,7 @@ The `commitlint` tool is a linter that lint's commit messages to enforce the con
    Now check the commit message using:
 
    ```bash
-   $ npm run commitlint --- --from <commit id> --to <commit id>
+   $ npm run commitlint --- --from <commit-id> --to <commit-id>
    ```
 
 3. Check from the first commit message
@@ -84,5 +84,5 @@ The `commitlint` tool is a linter that lint's commit messages to enforce the con
    Check the commit messages using:
 
    ```bash
-   $ npm run commitlint --- --from <commit id>
+   $ npm run commitlint --- --from <commit-id>
    ```

@@ -3,15 +3,15 @@
 Unit testing is an important aspect of software quality control. There is a lot that can be said about it and how to do it. I will limit myself to the highlights:
 
 - Unit tests find problems early in the development cycle
-- An automated unit test suite watches over your code in two dimensions: time[^1] and space[^2]
+- An automated unit test suite watches over your code in two dimensions: time[1] and space[2]
 - Developers will be less afraid to change existing code
 - The development process becomes more flexible
 - Improves your project’s truck factor
 - Reduces the need for manual testing
 - Software development will become more predictable and repeatable
 
-[^1] It watches over your code in the time dimension because once you’ve written a unit test, it guarantees that the code you wrote works now and in the future.  
-[^2] It watches over your code in space dimension because unit tests written for other features guarantee that your new code did not break them; likewise it guarantees that code written for other features does not adversely affect the code you wrote for this feature.
+[1] It watches over your code in the time dimension because once you’ve written a unit test, it guarantees that the code you wrote works now and in the future.
+[2] It watches over your code in space dimension because unit tests written for other features guarantee that your new code did not break them; likewise it guarantees that code written for other features does not adversely affect the code you wrote for this feature.
 
 There are many test frameworks out there, I personally prefer [Jest](https://jestjs.io/) as it is an all in one solution.
 
@@ -27,8 +27,8 @@ There are many test frameworks out there, I personally prefer [Jest](https://jes
    $ jest --init
    ```
 
-   You will be asked a number of questions. Most of them speak for them self. One that can save you a lot of initialization time is the type of test environment `node` or `jsdom`. If you are developing a library that does not require a browser functionality choose `node`. 
-   
+   You will be asked a number of questions. Most of them speak for them self. One that can save you a lot of initialization time is the type of test environment `node` or `jsdom`. If you are developing a library that does not require a browser functionality choose `node`.
+
 3. If you did not select the option to run Jest from the `scripts` section of the `package.json` file during initialization, then add the following.
 
    ```json
@@ -54,19 +54,19 @@ There are many test frameworks out there, I personally prefer [Jest](https://jes
 5. Configure eslint to work with Jest.
 
    Install the eslint Jest plugin.
-   
+
    ```bash
    $ npm install -D eslint-plugin-jest
    ```
 
    Create a `test` directory in the main project directory.
-   
+
    ```bash
    mkdir tests
    ```
-   
+
    In the `test` directory create a `.eslintrc.js` file specifically for the tests and add the following contents.
-  
+
    ```js
    module.exports = {
      extends: ['plugin:jest/recommended'],
@@ -92,8 +92,8 @@ There are many test frameworks out there, I personally prefer [Jest](https://jes
 
    ```json
    {
-     "husky": {  
-       "hooks": {  
+     "husky": {
+       "hooks": {
          "pre-commit": "npm test && npm run lint:check && npm run lint:fix"
        }
      }
@@ -103,7 +103,7 @@ There are many test frameworks out there, I personally prefer [Jest](https://jes
 **Webstorm tip**
 
 Getting Webstorm to recognize aliases
-                 
+
 If you setup aliases for Jest Webstorm will not understand them by default. The trick to help Webstorm understand them is to define a webpack configuration file (`webpack.config.js`) that defines the same aliases.
 
 ```js

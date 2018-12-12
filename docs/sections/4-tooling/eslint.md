@@ -60,8 +60,7 @@
    ```js
    module.exports = {
      root: true,
-     extends: ['prettier', 'prettier/standard'],
-     plugins: ['prettier'],
+     extends: ['standard'],
      parserOptions: {
        ecmaVersion: 2017
      },
@@ -75,8 +74,7 @@
          rules: {
            quotes: [2, 'single'],
            'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-           'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
-           'prettier/prettier': 'error'
+           'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
          }
        }
      ]

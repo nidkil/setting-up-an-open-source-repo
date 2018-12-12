@@ -6,7 +6,7 @@ ESLint also features code formatting capabilities. However, in corporation with 
 
 Prettier is built for integration with ESLint, so they play well together . We want ESLint to (if possible) auto-fix detected programming errors and derivations from coding conventions and Prettier to auto-fix violations of code formatting conventions. This is can be achieved manually by running npm scripts and automatically by using git commit hooks. We will setup both.
 
-An additional requirement is that we want everything to work for [Vue single file components](https://vuejs.org/v2/guide/single-file-components.html) too. 
+An additional requirement is that we want everything to work for [Vue single file components](https://vuejs.org/v2/guide/single-file-components.html) too.
 
 1. Lets install the `prettier` module.
 
@@ -19,9 +19,9 @@ An additional requirement is that we want everything to work for [Vue single fil
    ```bash
    $ npm install --save-dev eslint-plugin-prettier eslint-config-prettier
    ```
-   
+
    With `eslint-config-prettier` we turn off all ESLint code formatting rules that are unnecessary or might conflict with Prettier.
-   
+
    With `eslint-plugin-prettier` we add Prettier as an ESLint rule.
 
 3. Add `prettier` to `.eslintrc.js` file.
@@ -37,7 +37,7 @@ An additional requirement is that we want everything to work for [Vue single fil
    ```
 
     Or in a more concise way.
-    
+
    ```js
     module.exports = {
       extends: ['plugin:prettier/recommended']
@@ -52,14 +52,15 @@ An additional requirement is that we want everything to work for [Vue single fil
       "tabWidth": 2,
       "semi": false,
       "singleQuote": true,
-      "endOfLine": "lf"
+      "endOfLine": "lf",
+      "printWidth": 100
     }
     ```
- 
+
     These changes will make Prettier behave like the standard settings of Vue (no trailing comma's, tabs replaced by two spaces, no trailing semicolons and single quotes for strings). The last setting changes end of line characters to `\n`, which is common on Linux and macOS. Otherwise Prettier opts for `auto`, which means preserving the line endings used or if mixed it will convert line endings to the first line ending type it finds per file.
-    
+
     You can find more information about the available options [here](https://prettier.io/docs/en/options.html).
- 
+
 5. Check for `eslint` configuration conflicts with `prettier`. The `eslint-config-prettier` plugin is shipped with a CLI helper tool that checks for configuration conflicts. Add a script to the `package.json` file.
 
    ```json
@@ -79,7 +80,7 @@ An additional requirement is that we want everything to work for [Vue single fil
      }
    }
    ```
-   
+
    The pre commit hook prevents committing if the lint check or linting are not successful. This is a great option to improve development productivity and code quality.
 
 ### ESLint and Prettier with Vue.js
