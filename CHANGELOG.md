@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/nidkil/setup-os-repo/compare/v1.1.0...v1.2.0) (2018-12-13)
+
+
+### Features
+
+* added markdown-toc ([8cfd058](https://github.com/nidkil/setup-os-repo/commit/8cfd058))
+
+
+
 # [1.1.0](https://github.com/nidkil/setup-os-repo/compare/v1.0.3...v1.1.0) (2018-12-12)
 
 
