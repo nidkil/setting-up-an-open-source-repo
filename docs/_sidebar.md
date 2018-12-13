@@ -50,7 +50,7 @@
 
     - Maintenance
 
-        - [Greenkeeper](sections/4-tooling/travis-ci.md)
+        - [Greenkeeper](sections/4-tooling/greenkeeper.md)
 
 - Cherry on the cake
 
