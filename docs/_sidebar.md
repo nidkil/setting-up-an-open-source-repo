@@ -36,6 +36,10 @@
         - [docsify](sections/4-tooling/docsify.md)
         - [JSDoc](sections/4-tooling/jsdoc.md)
 
+    - Continuous integration
+
+        - [Travis CI](sections/4-tooling/travis-ci.md)
+
     - Build & packaging
 
         - [Bili](sections/4-tooling/bili.md)
@@ -43,6 +47,10 @@
     - Releasing
 
         - [Release It!](sections/4-tooling/release-it.md)
+
+    - Maintenance
+
+        - [Greenkeeper](sections/4-tooling/travis-ci.md)
 
 - Cherry on the cake
 

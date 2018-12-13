@@ -13,21 +13,27 @@ A very simple but effective tool that generates a table of contents (toc) from t
    ```json
    {
      "scripts": {
-       "readme:toc": "markdown-toc README.md -i --no-firsth1 --maxdepth=2 --bullets=-"
+       "readme:toc": "markdown-toc README.md -i --no-firsth1 --maxdepth=1 --bullets=-"
      }
    }
    ```
 
 2. Add the markdown-toc `<!-- toc -->` marker to the `README.md` file that indicates where the toc must be inserted.
 
-    In the following example header 2 & 3 are added to the toc when `readme:toc` is run.
+    In the following example header 2 & 3 are added to the toc when `readme:toc` is run. The html tags `<details>` around the toc makes the toc collapsible. If you do not want this leave them out.
 
     ```md
-    # First header
+    # Page header
 
-    <!-- toc -->
+    <details>
+      <summary><strong>Table of Contents</strong> (click to expand)</summary>
+      <!-- toc -->
+    </details>
 
-    ## Header 2
+    ## Header 1 toc
 
-    ## Header 3
+    ### Subheader not part of toc
+
+    ## Header 2 toc
     ```
+

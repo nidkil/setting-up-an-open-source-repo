@@ -2,15 +2,16 @@
 
 So which badges should you add? Try the following for starters:
 
-1. Node version being used
-2. Frameworks being used
-3. Contributions are welcome
-4. License
-5. Dependencies up to date, checkout [David](https://david-dm.org) and the [GitHub](https://github.com/alanshaw/david) repo. Or alternatively checkout [Requires.io](https://requires.io/).
+1. Build passing - [Travis CI](https://travis-ci.com)
+2. Dependencies up to date - [Greenkeeper](https://greenkeeper.io)
+3. Node version being used
+4. Frameworks being used
+5. Contributions are welcome
+6. License
 
 Just for fun
 
-1. Repo hit counter 
+1. Repo hit counter
 
 Want to generate your own badges? No problem checkout [Shields.io](https://shields.io/#/).
 

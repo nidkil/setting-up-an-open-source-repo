@@ -107,14 +107,26 @@ Okay, lets add a `.gitignore` file in the root directory of the project and add 
 ```bash
 .DS_Store
 node_modules
-dist
+/dist
+/clover
 
 # local env files
 .env.local
 .env.*.local
 
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
 # Editor directories and files
 .idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
 ```
 
 Feel free to add other files that git must ignore.

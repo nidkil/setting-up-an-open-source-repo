@@ -49,7 +49,7 @@ The `commitlint` tool is a linter that lint's commit messages to enforce the con
 
    Now we can easily run `commitlint` using `npm run commitlint` and pass it commandline arguments using the double dash (--).
 
-   For the other commands please refer to `Tips & tricks` that follows.
+   For the other commands please refer to `Tips & tricks` below.
 
 ### Tips & tricks
 
