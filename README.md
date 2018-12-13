@@ -9,7 +9,7 @@
 
 ## Welcome!
 
-> This guide describes the steps to setup an (open source) repository based on a recommended workflow. The goal is to professionalize and standardize the way of working and were possible automate and enforce this.  
+> This guide describes the steps to setup an (open source) repository based on a recommended workflow. The goal is to professionalize and standardize the way of working and were possible automate and enforce this.
 
 Of course it can also be used for closed source repositories, as any development team can benefit from these principles.
 
@@ -33,6 +33,10 @@ We welcome pull requests! What follows is the simplified version of the contribu
 4. Commit your changes: `npm run commit`
 5. Push the branch: `git push origin my-new-feature`
 6. Submit a pull request :-)
+
+## Brag about it
+
+Do you find this package useful? Then please brag about it to the world by Twitter, email, blog, Discord, Slack, forums, etc. etc. Thx!
 
 # Author
 
