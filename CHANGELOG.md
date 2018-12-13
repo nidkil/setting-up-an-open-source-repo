@@ -1,3 +1,12 @@
+## [1.2.1](https://github.com/nidkil/setup-os-repo/compare/v1.2.0...v1.2.1) (2018-12-13)
+
+
+### Bug Fixes
+
+* **greenkeeper:** _sidebar.md link ([ed7951c](https://github.com/nidkil/setup-os-repo/commit/ed7951c))
+
+
+
 # [1.2.0](https://github.com/nidkil/setup-os-repo/compare/v1.1.0...v1.2.0) (2018-12-13)
 
 

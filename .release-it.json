@@ -1,8 +1,8 @@
 {
   "dry-run": false,
-  "requireCleanWorkingDir": true,
+  "requireCleanWorkingDir": false,
   "non-interactive": false,
-  "verbose": true,
+  "verbose": false,
   "pkgFiles": ["package.json"],
   "disable-metrics": true,
   "increment": "conventional:angular",
