@@ -17,7 +17,13 @@
     - From `More options` (right hand side under your avatar) select `settings`
     - Add an environment variable with the `COVERALLS_REPO_TOKEN` use the value you copied in the previous step.
 
-3. Add an entry to the `scripts` section of the `package.json` file.
+3. Install Coveralls node package.
+
+   ```bash
+   $ npm install --save-dev coveralls
+   ```
+
+4. Add an entry to the `scripts` section of the `package.json` file.
 
    ```json
    {
@@ -27,7 +33,7 @@
    }
    ```
 
-4. To test locally set the environmental variable `COVERALLS_REPO_TOKEN`.
+5. To test locally set the environmental variable `COVERALLS_REPO_TOKEN`.
 
    Windows
 
