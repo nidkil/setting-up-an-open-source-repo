@@ -1,5 +1,7 @@
 # Jest
 
+!> **IMPORTANT** If you are using [Vue CLI 3](https://cli.vuejs.org/) select the option `Unit Testing` and choose `Jest` as testing solution. You can skip the first steps and go straight to [step 6](#step-6).
+
 Unit testing is an important aspect of software quality control. There is a lot that can be said about it and how to do it. I will limit myself to the highlights:
 
 - Unit tests find problems early in the development cycle
@@ -14,6 +16,8 @@ Unit testing is an important aspect of software quality control. There is a lot 
 [2] It watches over your code in space dimension because unit tests written for other features guarantee that your new code did not break them; likewise it guarantees that code written for other features does not adversely affect the code you wrote for this feature.
 
 There are many test frameworks out there, I personally prefer [Jest](https://jestjs.io/) as it is an all in one solution.
+
+## Setup
 
 1. Lets install the `jest` module.
 
@@ -88,7 +92,7 @@ There are many test frameworks out there, I personally prefer [Jest](https://jes
 
    This makes use of eslint's  cascading configuration. The configuration cascade works by using the closest .eslintrc file to the file being linted as the highest priority, then any configuration files in the parent directory, and so on.
 
-6. Update pre commit hooks in `.huskyrc.json`, so that test are also run before committing.
+6. <a name="step-6">Update pre commit hooks in `.huskyrc.json`, so that test are also run before committing.</a>
 
    ```json
    {
@@ -100,7 +104,21 @@ There are many test frameworks out there, I personally prefer [Jest](https://jes
    }
    ```
 
-**Webstorm tip**
+## Jest with Vue CLI 3
+
+1. Update the following entries in the `scripts` section of the `package.json` file.
+
+   ```json
+   {
+     "scripts": {
+       "serve": "vue-cli-service serve --open",
+       "test:unit": "vue-cli-service test:unit",
+       "coverage": "vue-cli-service test:unit --coverage"
+     }
+   }
+   ```
+
+## Webstorm
 
 Getting Webstorm to recognize aliases
 

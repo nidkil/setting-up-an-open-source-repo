@@ -16,7 +16,9 @@ Greenkeeper has a number of requirements for each repository it is meant to watc
 - Issues must be enabled for the repo (careful: issues are disabled by default on forked repositories)
 - If you do not have a paid subscription, the repo must be public
 
-If you meet the prerequisites move on to the installation.
+If you meet the prerequisites move on to the setup.
+
+## Setup
 
 1. Install the Greenkeeper GitHub app.
 

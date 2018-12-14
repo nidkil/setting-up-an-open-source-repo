@@ -2,6 +2,10 @@
 
 [ESLint](https://eslint.org) is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code, with the goal of making code more consistent and avoiding bugs. This ensures all code confirms with the projects coding standards and it catches potential errors.
 
+!> **IMPORTANT** If you are using [Vue CLI 3](https://cli.vuejs.org/) then you can skip this first part and go straight to [Lint before committing](#lint-before-committing).
+
+## Setup
+
 1. Lets install the `eslint` module.
 
    ```bash

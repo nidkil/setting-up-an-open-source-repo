@@ -2,6 +2,8 @@
 
 The `commitlint` tool is a linter that lint's commit messages to enforce the conventional commit standard. We want to check that commit messages comply before they are committed. We do this using the git pre-commit hook using `husky`. Let's install `husky` and `commitlint` and configure them.
 
+## Setup
+
 1. In the project root directory install `husky`.
 
    ```bash
@@ -39,10 +41,8 @@ The `commitlint` tool is a linter that lint's commit messages to enforce the con
    ```json
    {
      "scripts": {
-       "commitlint": "commitlint",
-       "commitlint:last": "commitlint --edit",
-       "git:first": "git rev-list HEAD | tail -n 1",
-       "git:last": "git rev-list HEAD | head -n 1"
+       "cl": "commitlint",
+       "cl:last": "commitlint --edit"
      }
    }
    ```

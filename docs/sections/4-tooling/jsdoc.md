@@ -6,6 +6,8 @@ As you go through the selfless act of untangling things that were obvious or cle
 
 The de facto standard for documenting JavaScript code is [JSDoc](http://usejsdoc.org/). We will install and configure the module.
 
+## Setup
+
 1. Install the `jsdoc` module.
 
     ```bash

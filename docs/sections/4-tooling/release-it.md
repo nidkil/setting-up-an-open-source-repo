@@ -10,7 +10,7 @@ Release It! automates the tedious tasks of software releases. It automates the r
 
 If you have ever done this process manually, then you know what a big deal and time saver this is!
 
-> **Prerequisites**: The repository must exist on GitHub. If the repository was first created locally it must have been published to the GitHub repo.
+## Setup
 
 1. Install `release-it` using npm.
 
@@ -120,31 +120,26 @@ If you have ever done this process manually, then you know what a big deal and t
 
     ```json
     {
-      "dry-run": false,
-      "requireCleanWorkingDir": true,
-      "non-interactive": false,
-      "verbose": false,
-      "pkgFiles": ["package.json"],
-      "disable-metrics": true,
       "increment": "conventional:angular",
-      "beforeChangelogCommand": "conventional-changelog -p angular -i CHANGELOG.md -s",
-      "changelogCommand": "conventional-changelog -p angular | tail -n +3",
-      "safeBump": false,
-      "buildCommand": "npm run build",
-      "src": {
-        "commitMessage": "chore: release v${version}",
+      "scripts" : {
+        "beforeStart": "npm run test && npm run lint:error-only",
+        "afterBump": "conventional-changelog -p angular -i CHANGELOG.md -s",
+        "beforeStage": "npm run build",
+        "changelog": "conventional-changelog -p angular | tail -n +3"
+      },
+      "git" : {
+        "commitMessage": "chore: release ${version}",
         "tagName": "v${version}",
-        "tagAnnotation": "Release v${version}",
-        "beforeStartCommand": "npm run test && npm run lint:error-only"
+        "tagAnnotation": "Release v${version}"
+      },
+      "npm": {
+        "publish": true,
+        "tag": "latest"
       },
       "github": {
         "release": true,
         "releaseName": "🚀 Release ${version}",
         "tokenRef": "GITHUB_TOKEN"
-      },
-      "npm": {
-        "publish": true,
-        "tag": "latest"
       }
     }
     ```

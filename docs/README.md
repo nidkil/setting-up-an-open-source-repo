@@ -6,7 +6,7 @@
 
 ## Welcome!
 
-> This document describes the steps to setup an open source repository based on a recommended workflow. The goal is to professionalize and standardize the way of working and were possible enforce this.  
+> This document describes the steps to setup an open source repository based on a recommended workflow. The goal is to professionalize and standardize the way of working and were possible enforce this.
 
 It can also be used for closed source repositories, as any development team can benefit from these principles.
 
@@ -15,5 +15,3 @@ I wrote this document when I was setting up my first open source repositories, b
 This is a living document. I will continue to add to this document as needed and enhance it where needed.
 
 Enjoy!
-
-Go to the [Guide](https://setup-os-repo.nidkil.com).

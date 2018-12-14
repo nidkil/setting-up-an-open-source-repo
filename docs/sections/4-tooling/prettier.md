@@ -1,5 +1,7 @@
 # Prettier
 
+!> **IMPORTANT** If you are using [Vue CLI 3](https://cli.vuejs.org/) and have selected the option `Linter / Formatter` then yoy can go straight to [ESLint and Prettier with Vue](#eslint-and-prettier-with-vue-cli-3).
+
 [Prettier](https://prettier.io/) is a zero-configuration code formatting utility by design. Its only purpose is to reformat source code; it does this job well. The main goal of Prettier is to remove all the distractions of writing code by allowing the developer writing code as he likes. Prettier instantly formats the code correctly on save. This means all code uses the same coding style, which makes the code much easier to read and understand.
 
 ESLint also features code formatting capabilities. However, in corporation with Prettier this can lead to problems due to contrary formatting configurations. It is possible to disable all ESLint rules related to code formatting and use Prettier only for beautifying your code.
@@ -7,6 +9,8 @@ ESLint also features code formatting capabilities. However, in corporation with 
 Prettier is built for integration with ESLint, so they play well together . We want ESLint to (if possible) auto-fix detected programming errors and derivations from coding conventions and Prettier to auto-fix violations of code formatting conventions. This is can be achieved manually by running npm scripts and automatically by using git commit hooks. We will setup both.
 
 An additional requirement is that we want everything to work for [Vue single file components](https://vuejs.org/v2/guide/single-file-components.html) too.
+
+## Setup
 
 1. Lets install the `prettier` module.
 
@@ -25,6 +29,8 @@ An additional requirement is that we want everything to work for [Vue single fil
    With `eslint-plugin-prettier` we add Prettier as an ESLint rule.
 
 3. Add `prettier` to `.eslintrc.js` file.
+
+    !> **IMPORTANT** If you are using [Vue CLI 3](https://cli.vuejs.org/) then you can skip this step. Prettier will be integrated with ESLint in [ESLint and Prettier with Vue.js](#eslint-and-prettier-with-vuejs).
 
    ```js
     module.exports = {
@@ -48,6 +54,7 @@ An additional requirement is that we want everything to work for [Vue single fil
 
     ```json
     {
+      "spaceBeforeFunctionParen": true,
       "trailingComma": "none",
       "tabWidth": 2,
       "semi": false,
@@ -83,9 +90,9 @@ An additional requirement is that we want everything to work for [Vue single fil
 
    The pre commit hook prevents committing if the lint check or linting are not successful. This is a great option to improve development productivity and code quality.
 
-### ESLint and Prettier with Vue.js
+### ESLint and Prettier with Vue CLI 3
 
-If you are using Vue CLI 3 then you are lucky, because it can generate a project with ESLint setup. Just select the option when creating the project. These instructions are for this situation. The generated `.eslintrc.js`  file looks like this.
+If you are using Vue CLI 3 then you are lucky, because it can generate a project with ESLint and Prettier setup. All you have to do is select the option `Linter / Formatter` when creating the project. These instructions are for this situation. The generated `.eslintrc.js`  file looks something like this.
 
 ```js
 module.exports = {
@@ -107,33 +114,7 @@ module.exports = {
 }
 ```
 
-Lets add `prettier` to the mix.
-
-```js
-module.exports = {
-  root: true,
-  env: {
-    node: true
-  },
-  extends: [
-    `prettier`,
-    `prettier/standard`,
-    'plugin:vue/essential',
-    '@vue/standard'
-  ],
-  plugins: ['vue', 'prettier'],
-  rules: {
-    'prettier/prettier': 'error',
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
-  },
-  parserOptions: {
-    parser: 'babel-eslint'
-  }
-}
-```
-
-Finally we need to change setup the `scripts` in `package.json`.
+All you need to do is add the following entries to the `scripts` section in the `package.json` file.
 
 ```json
 {
@@ -141,11 +122,8 @@ Finally we need to change setup the `scripts` in `package.json`.
     "lint": "vue-cli-service lint -c .eslintrc.js --format codeframe plugin src tests",
     "lint:fix": "vue-cli-service lint -c .eslintrc.js --format codeframe --fix plugin src tests",
     "lint:error-only": "vue-cli-service lint -c .eslintrc.js --format codeframe --quiet plugin src tests",
-    "REMARK#1": "Following command isn't working",
-    "lint:check": "vue-cli-service lint --print-config .eslintrc.js | eslint-config-prettier-check",
-    "pre-commit": "npm run lint-check && npm run lint"
   }
 }
 ```
 
-Note that we are not calling `eslint` directly, but calling it through Vue CLI 3 using `vue-cli-service lint`.
+> **Note** that we are not calling `eslint` directly, but calling it through Vue CLI 3 using `vue-cli-service lint`.
