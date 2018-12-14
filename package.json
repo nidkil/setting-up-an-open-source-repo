@@ -34,7 +34,7 @@
   "bugs": "https://github.com/nidkil/setup-os-repo/issues",
   "homepage": "https://github.com/nidkil/setup-os-repo#readme",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Warning: no test specified\" && exit 0",
     "cz:commit": "git cz",
     "cz:retry": "git cz --retry",
     "commitlint": "commitlint",
