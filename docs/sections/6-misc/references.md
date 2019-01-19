@@ -12,6 +12,7 @@ These are the links to the tools used in this guide.
 - [husky](https://github.com/typicode/husky)
 - [Jest](https://jestjs.io/)
 - [JSDoc](http://usejsdoc.org/)
+- [lint-staged](https://github.com/okonet/lint-staged)
 - [Prettier](https://prettier.io/)
 - [Release It!](https://github.com/webpro/release-it)
 - [Travis CI](https://travis-ci.com)

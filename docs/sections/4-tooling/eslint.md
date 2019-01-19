@@ -95,22 +95,29 @@
 
 ## Lint before committing
 
-Now lets make sure users cannot commit without there code being linted by ESLint.
+Now lets make sure users cannot commit without there code being linted by ESLint and formatted by Prettier. We always want this to run before code is committed to avoid committing files that contain errors or do not conform to our code formatting rules. We want to run this process with auto fix (`--fix`). A problem with running this on commit is that it will potentially change files that will not be part of the commit. To solve this we are going to add another cool tool [lint-staged](https://github.com/okonet/lint-staged). This tool will only run ESLint and Prettier on the staged files, which are the files we are committing. It will commit any files that are changed during this process. Before it runs ESLint and Prettier it stages any unstaged and untracked files and restores them ones the process has completed. This way these files will not be processed. Pretty cool, right?
 
-1. In the project root directory install `husky`.
+1. Install `lint-staged` and `husky`.
 
    ```bash
-   $ npm install --save-dev husky
+   $ npm install --save-dev lint-staged husky
    ```
 
-2. Add ESLint to the git pre commit hook in `.huskyrc.json`, so that changes are linted before they are committed.
+2. Add ESLint to the `.lintstagedrc.json` file, so that changes are linted before they are committed.
 
-   ```json
-   {
-     "husky": {
-       "hooks": {
-         "pre-commit": "npm run lint:fix"
-       }
-     }
-   }
-   ```
+    ```json
+    {
+        "*.{js,vue}": ["npm run lint:fix --", "git add"]
+    }
+    ```
+
+3. Add `lint-staged` to the git pre commit hook in the `.huskyrc.json` file, so that staged files are linted before they are committed.
+
+    ```json
+    {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    }
+    ```
+
