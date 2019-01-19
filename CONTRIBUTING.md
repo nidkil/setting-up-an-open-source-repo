@@ -70,7 +70,7 @@ Somethings to keep in mind
 
 - **Consider our release cycle** - We follow [SemVer v2.0.0](http://semver.org/). Randomly breaking public APIs is not an option.
 
-- **Create feature branches** - Don't ask us to pull from your master branch. Always create a separate branch for any change. 
+- **Create feature branches** - Don't ask us to pull from your master branch. Always create a separate branch for any change.
 
 - **One pull request per feature** - If you want to do more than one thing, send multiple pull requests.
 
@@ -80,7 +80,7 @@ Somethings to keep in mind
 
 ## Set up the project on your machine
 
-First fork the the project on [GitHub]().
+First fork the the project on [GitHub](https://github.com/nidkil/vue-build-helper). Learn all about forking a repo [here](https://help.github.com/articles/fork-a-repo/). More information on cloning a repo [here](https://help.github.com/articles/cloning-a-repository/).
 
 ```bash
 git clone https://github.com/nidkil/vue-build-helper

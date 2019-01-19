@@ -95,7 +95,7 @@
 
 ## Lint before committing
 
-Now lets make sure users cannot commit without there code being linted by ESLint and formatted by Prettier. We always want this to run before code is committed to avoid committing files that contain errors or do not conform to our code formatting rules. We want to run this process with auto fix (`--fix`). A problem with running this on commit is that it will potentially change files that will not be part of the commit. To solve this we are going to add another cool tool [lint-staged](https://github.com/okonet/lint-staged). This tool will only run ESLint and Prettier on the staged files, which are the files we are committing. It will commit any files that are changed during this process. Before it runs ESLint and Prettier it stages any unstaged and untracked files and restores them ones the process has completed. This way these files will not be processed. Pretty cool, right?
+Now lets make sure users cannot commit without there code being linted by ESLint and formatted by Prettier (see [next section](sections/4-tooling/prettier.md)). We always want this to run before code is committed to avoid committing files that contain errors or do not conform to our code formatting rules. We want to run this process with auto fix (`--fix`). A problem with running this on commit is that it will potentially change files that will not be part of the commit. To solve this we are going to add another cool tool [lint-staged](https://github.com/okonet/lint-staged). This tool will only run ESLint and Prettier on the staged files, which are the files we are committing. It will add any files that are changed during this process to the commit. Before it runs ESLint and Prettier it stashes any unstaged and untracked files and restores them once the process has completed. This way these files will not be processed. Pretty cool, right?
 
 1. Install `lint-staged` and `husky`.
 
@@ -103,7 +103,7 @@ Now lets make sure users cannot commit without there code being linted by ESLint
    $ npm install --save-dev lint-staged husky
    ```
 
-2. Add ESLint to the `.lintstagedrc.json` file, so that changes are linted before they are committed.
+2. Create the `.lintstagedrc.json` file in the project root and add the following entry to it, so that changes are linted before they are committed and any changes are added to the commit.
 
     ```json
     {
@@ -111,7 +111,7 @@ Now lets make sure users cannot commit without there code being linted by ESLint
     }
     ```
 
-3. Add `lint-staged` to the git pre commit hook in the `.huskyrc.json` file, so that staged files are linted before they are committed.
+3. Create the `.huskyrc.json` file and add `lint-staged` to the git pre commit hook, so that staged files are linted before they are committed.
 
     ```json
     {

@@ -28,11 +28,13 @@ Enjoy!
 We welcome pull requests! What follows is the simplified version of the contribution process, please read [here](./CONTRIBUTING.md) to fully understand our contribution policy and [here](./CODE-OF-CONDUCT.md) to understand our code of conduct.
 
 1. Fork the repository [here](https://github.com/nidkil/setup-os-repo)!
-2. Create your feature branch: `git checkout -b my-new-feature`
+2. Create your feature branch: `git checkout -b my_new_feature`
 3. If relevant, don't forget to add your tests and comment your code
 4. Commit your changes: `npm run commit`
 5. Push the branch: `git push origin my-new-feature`
 6. Submit a pull request :-)
+
+> **TIP** Learn all about forking a repo [here](https://help.github.com/articles/fork-a-repo/). More information on cloning a repo [here](https://help.github.com/articles/cloning-a-repository/).
 
 ## Support & brag about us
 
@@ -45,4 +47,4 @@ Please let the world know about us! Brag about us using Twitter, email, blog, Di
 **nidkil** © [nidkil](https://github.com/nidkil), released under the [MIT](LICENSE.md) license.
 Authored and maintained by nidkil with help from [contributors](https://github.com/nidkil/setup-os-repo/contributors).
 
-> [Website](https://nidkil.com) · GitHub [@nidkil](https://github.com/nidkil) · Twitter [@nidkil](https://twitter.com/nidkil)
+> [Website](https://nidkil.me) · GitHub [@nidkil](https://github.com/nidkil) · Twitter [@nidkil](https://twitter.com/nidkil)
