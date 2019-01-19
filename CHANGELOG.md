@@ -1,3 +1,12 @@
+## [1.3.1](https://github.com/nidkil/setup-os-repo/compare/v1.3.0...v1.3.1) (2019-01-19)
+
+
+### Bug Fixes
+
+* **coveralls:** install coveralls package ([6aca0f7](https://github.com/nidkil/setup-os-repo/commit/6aca0f7))
+
+
+
 # [1.3.0](https://github.com/nidkil/setup-os-repo/compare/v1.2.1...v1.3.0) (2018-12-14)
 
 
