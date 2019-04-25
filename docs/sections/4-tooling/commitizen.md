@@ -10,6 +10,12 @@ Commitizen is een interactive tool that helps follow the commit message standard
    $ npm install -g commitizen
    ```
 
+    Alternatively you can install locally, which makes sense if you want other developers to get up and running just using `npm install`.
+
+    ```bash
+    $ npm install --save-dev commitizen
+    ```
+
 2. Install the `cz-conventional-changelog` module.
 
     ```bash
@@ -30,7 +36,9 @@ Commitizen is een interactive tool that helps follow the commit message standard
 
    This means that Commitizen has been installed with the Conventional Commit standard adapter installed.
 
-4. Time to start committing. The following command replaces the usual `git commit` command.
+4. Time to start committing
+
+    The following `cz` command has been replaced by an interactive cli.
 
    ```bash
    $ git cz
