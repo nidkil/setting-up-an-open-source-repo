@@ -1,6 +1,6 @@
 # Prettier
 
-!> **IMPORTANT** If you are using [Vue CLI 3](https://cli.vuejs.org/) and have selected the option `Linter / Formatter` then yoy can go straight to [ESLint and Prettier with Vue](#eslint-and-prettier-with-vue-cli-3).
+!> **IMPORTANT** If you are using [Vue CLI 3](https://cli.vuejs.org/) and have selected the option `Linter / Formatter` then you can go straight to [ESLint and Prettier with Vue](#eslint-and-prettier-with-vue-cli-3).
 
 [Prettier](https://prettier.io/) is a zero-configuration code formatting utility by design. Its only purpose is to reformat source code; it does this job well. The main goal of Prettier is to remove all the distractions of writing code by allowing the developer writing code as he likes. Prettier instantly formats the code correctly on save. This means all code uses the same coding style, which makes the code much easier to read and understand.
 
