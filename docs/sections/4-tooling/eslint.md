@@ -120,6 +120,28 @@
 
    You can find more information about ESLint rules [here](https://eslint.org/docs/rules/).
 
+## Add babel-eslint
+
+If you have setup Babel then you need to add the babel-eslint plugin for babel to play nice with ESLint.
+
+ESLint's default parser and core rules only support the latest final ECMAScript standard and do not support experimental (such as new features) and non-standard (such as Flow or TypeScript types) syntax provided by Babel. babel-eslint is a parser that allows ESLint to run on source code that is transformed by Babel.
+
+First install the `babel-eslint` plugin:
+
+```bash
+$ npm install --save-dev babel-eslint
+```
+
+Now add it to the `.bashrc.js` file:
+
+```
+module.exports = {
+  parser: "babel-eslint"
+};
+```
+
+**NOTE** The parser options described in the official documentation are for the default parser and are not necessarily supported by babel-eslint. Please see the section [Additional parser configuration](https://github.com/babel/babel-eslint#additional-parser-configuration) for the supported parserOptions.
+
 ## Lint before committing
 
 Now lets make sure users cannot commit without there code being linted by ESLint and formatted by Prettier (see [next section](sections/4-tooling/prettier.md)). We always want this to run before code is committed to avoid committing files that contain errors or do not conform to our code formatting rules. We want to run this process with auto fix (`--fix`). A problem with running this on commit is that it will potentially change files that will not be part of the commit. To solve this we are going to add another cool tool [lint-staged](https://github.com/okonet/lint-staged). This tool will only run ESLint and Prettier on the staged files, which are the files we are committing. It will add any files that are changed during this process to the commit. Before it runs ESLint and Prettier it stashes any unstaged and untracked files and restores them once the process has completed. This way these files will not be processed. Pretty cool, right?
