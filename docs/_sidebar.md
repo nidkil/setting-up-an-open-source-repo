@@ -13,6 +13,7 @@
 
   - [Initialize the repository](sections/3-basics/initialize-the-repository.md)
   - [Standardize (informational) files](sections/3-basics/standardize-informational-files.md)
+  - [Updating NPM packages](sections/3-basics/updating-npm-packages.md)
 
 - Tooling
 
