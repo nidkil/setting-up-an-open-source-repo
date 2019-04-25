@@ -5,7 +5,7 @@
 <p align="center" style="font-size: 1.0em">Professionalizing and standardizing the way of working for (open source) repositories</p>
 
 [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
-[![HitCount](http://hits.dwyl.com/nidkil/jest-test.svg)](http://hits.dwyl.com/dwyl/start-here)
+[![HitCount](http://hits.dwyl.com/nidkil/setup-os-repo.svg)](http://hits.dwyl.com/dwyl/start-here)
 
 ## Welcome!
 
