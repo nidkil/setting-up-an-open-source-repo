@@ -17,6 +17,10 @@
 
 - Tooling
 
+    - ECMAScript 2015+ support
+
+        - [Babel](sections/4-tooling/babel.md)
+
     - Code quality and formatting
 
         - [ESLint](sections/4-tooling/eslint.md)
@@ -29,7 +33,7 @@
 
     - Commit messages
 
-        - [commitizen](sections/4-tooling/commitizen.md)
+        - [Commitizen](sections/4-tooling/commitizen.md)
         - [commitlint](sections/4-tooling/commitlint.md)
 
     - Documentation
