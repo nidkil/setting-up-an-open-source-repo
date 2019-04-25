@@ -122,12 +122,11 @@ If you have ever done this process manually, then you know what a big deal and t
     {
       "increment": "conventional:angular",
       "scripts" : {
-        "beforeStart": "npm run test && npm run lint:error-only",
-        "afterBump": "conventional-changelog -p angular -i CHANGELOG.md -s",
-        "beforeStage": "npm run build",
-        "changelog": "conventional-changelog -p angular | tail -n +3"
+        "beforeStart": "npm run test && npm run lint:error-only"
       },
       "git" : {
+        "changelog": "conventional-changelog -p angular | tail -n +3",
+        "beforeStage": "conventional-changelog -p angular -i CHANGELOG.md -s",
         "commitMessage": "chore: release ${version}",
         "tagName": "v${version}",
         "tagAnnotation": "Release v${version}"
