@@ -2,11 +2,11 @@
   "increment": "conventional:angular",
   "scripts" : {
     "beforeStart": "npm run test",
-    "afterBump": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "beforeStage": "npm run build",
-    "changelog": "conventional-changelog -p angular | tail -n +3"
+    "beforeStage": "npm run build"
   },
   "git" : {
+    "changelog": "conventional-changelog -p angular | tail -n +3",
+    "beforeStage": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "commitMessage": "chore: release ${version}",
     "tagName": "v${version}",
     "tagAnnotation": "Release v${version}"
