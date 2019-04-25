@@ -6,29 +6,56 @@
 
 ## Setup
 
-1. Lets install the `eslint` module.
+1. Lets install the `eslint` module and it's dependencies.
 
-   ```bash
-   $ npm install -g eslint
-   ```
+    **NOTE** When installing eslint globally it's dependencies must also be installed globally.
+    
+    ```bash
+    $ npm install -g eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard
+    ```
+    
+    Alternatively you can install locally, which makes sense if you want other developers to get up and running just using `npm install`.
+
+    ```bash
+    $ npm install --save-dev eslint eslint-config-standard eslint-plugin-import eslint-plugin-node eslint-plugin-promise eslint-plugin-standard
+    ```
 
 2. Setup a configuration file.
 
-   ```bash
-   $ eslint --init
-   ```
+    ```bash
+    $ eslint --init
+    ```
 
-   After that, you can run ESLint on any file.
+    This will ask you a number of questions:
+    
+    ```
+    ? How would you like to configure ESLint?
+      Answer questions about your style
+    ❯ Use a popular style guide
+      Inspect your JavaScript file(s)
+    
+    ? Which style guide do you want to follow?
+      Google
+      Airbnb
+    ❯ Standard
+    
+    ? What format do you want your config file to be in? (Use arrow keys)
+    ❯ JavaScript
+      YAML
+      JSON
+    ```
 
-   ```bash
-   $ eslint file1.js file2.js
-   ```
+    After that, you can run ESLint on any file.
+    
+    ```bash
+    $ eslint file1.js file2.js
+    ```
 
-   Or directory like this. The quotes and `**` indicate that glob must be used, in other words it will recursively iterate all directories and lint all files.
+    Or directory like this. The quotes and `**` indicate that glob must be used, in other words it will recursively iterate all directories and lint all files.
 
-   ```bash
-   $ eslint "src/**"
-   ```
+    ```bash
+    $ eslint "src/**"
+    ```
 
 3. Add the following entry to `scripts` in the `package.json` file.
 
@@ -37,7 +64,7 @@
      "scripts": {
        "lint": "eslint -c .eslintrc.js --format codeframe bin src tests",
        "lint:fix": "eslint --fix -c .eslintrc.js --format codeframe bin src tests",
-       "lint:error-only": "eslint -c .eslintrc.js --quiet --format codeframe src tests bin",
+       "lint:error-only": "eslint -c .eslintrc.js --quiet --format codeframe bin src tests"
      }
    }
    ```
