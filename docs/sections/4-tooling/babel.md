@@ -143,8 +143,8 @@ All other Watcher settings are predefined and should be ready to go. With this d
 When you’re developing a Node.js application in ES6, one of the ways to run and test it is using `@babel/register`.
 
 - In your Node.js run/debug configuration add `-r @babel/register` to the `Node parameters` field.
-- The `Working directory` field MUST be set to the `src` directory. 
-- The `JavaScript file` field must contain the JavaScript file you want to run. **If the file is not located in the `src` directory it must be prefixed with the directory/directories it is located in.**
+- The `Working directory` field MUST be set to the project root directory, because this is the root directory of the aliases defined with `babel-plugin-module-resolver`.
+- The `JavaScript file` field must contain the JavaScript file you want to run including the directories relative to the project directory. This will be at a minimum the `src` directory for the application or `test` directory for tests.
 - Save configuration and hit run or debug.
 
 #### Using @babel/node
