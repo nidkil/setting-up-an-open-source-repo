@@ -122,7 +122,7 @@ There are many test frameworks out there, I personally prefer [Jest](https://jes
 
 ### Getting Webstorm to recognize aliases
 
-If you setup aliases for Jest Webstorm will not understand them by default. The trick to help Webstorm understand them is to define a webpack configuration file (`webpack.config.js`) that defines the same aliases.
+Webstorm will not understand aliases setup in Jest by default. The trick to help Webstorm understand them, is to define a webpack configuration file (`webpack.config.js`) that has the same aliases.
 
 ```js
 module.exports = {
@@ -134,4 +134,4 @@ module.exports = {
 }
 ```
 
-And voila like magic Webstorm now understands the aliases and you can navigate them with ctrl+b.
+And voila like magic Webstorm now understands the aliases and you can navigate them with Ctrl+B and code completion works. O yeah!
