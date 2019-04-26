@@ -120,7 +120,7 @@ There are many test frameworks out there, I personally prefer [Jest](https://jes
 
 ## Webstorm
 
-Getting Webstorm to recognize aliases
+### Getting Webstorm to recognize aliases
 
 If you setup aliases for Jest Webstorm will not understand them by default. The trick to help Webstorm understand them is to define a webpack configuration file (`webpack.config.js`) that defines the same aliases.
 
