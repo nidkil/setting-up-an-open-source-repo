@@ -91,7 +91,7 @@ Add the plugin to the `babelrc.js` file:
     ["module-resolver", {
       "root": ["./src"],
       "alias": {
-        "@": ".",
+        "@": "./src",
         "libs": "./libs"
       }
     }]
@@ -142,7 +142,9 @@ All other Watcher settings are predefined and should be ready to go. With this d
 
 When you’re developing a Node.js application in ES6, one of the ways to run and test it is using `@babel/register`.
 
-- In your Node.js run/debug configuration add `-r @babel/register` in the Node parameters field. Don’t forget to specify the path to the JavaScript file you’d like to run.
+- In your Node.js run/debug configuration add `-r @babel/register` to the `Node parameters` field.
+- The `Working directory` field MUST be set to the `src` directory. 
+- The `JavaScript file` field must contain the JavaScript file you want to run. **If the file is not located in the `src` directory it must be prefixed with the directory/directories it is located in.**
 - Save configuration and hit run or debug.
 
 #### Using @babel/node
@@ -151,19 +153,20 @@ Alternatively you can use @babel/node. To use it, you need to install it and set
 
 ### Getting Webstorm to recognize aliases
     
-If you setup aliases using the Babel plugin `babel-plugin-module-resolver` Webstorm will not understand them by default. The trick to help Webstorm understand them is to define a webpack configuration file (`webpack.config.js`) that defines the same aliases.
+Webstorm will not understand aliases setup with the Babel plugin `babel-plugin-module-resolver` by default. The trick to help Webstorm understand them, is to define a webpack configuration file (`webpack.config.js`) that has the same aliases.
     
 ```js
 module.exports = {
  resolve: {
    alias: {
-     '@': require('path').resolve(__dirname, 'src')
+     '@': require('path').resolve(__dirname, 'src'),
+     'libs': require('path').resolve(__dirname, 'src/libs')
    }
  }
 }
 ```
     
-And voila like magic Webstorm now understands the aliases and you can navigate them with Ctrl+B.
+And voila like magic Webstorm now understands the aliases and you can navigate them with Ctrl+B and code completion works. O yeah!
 
 ## Troubleshooting
 
