@@ -30,7 +30,7 @@ An additional requirement is that we want everything to work for [Vue single fil
 
 3. Add `prettier` to `.eslintrc.js` file.
 
-    !> **IMPORTANT** If you are using [Vue CLI 3](https://cli.vuejs.org/) then you can skip this step. Prettier will be integrated with ESLint in [ESLint and Prettier with Vue.js](#eslint-and-prettier-with-vuejs).
+!> **IMPORTANT** If you are using [Vue CLI 3](https://cli.vuejs.org/) then you can skip this step. Prettier will be integrated with ESLint in [ESLint and Prettier with Vue.js](#eslint-and-prettier-with-vuejs).
 
    ```js
     module.exports = {
