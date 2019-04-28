@@ -29,15 +29,34 @@
     This will ask you a number of questions:
     
     ```
-    ? How would you like to configure ESLint?
-      Answer questions about your style
-    ❯ Use a popular style guide
-      Inspect your JavaScript file(s)
+    ? How would you like to use ESLint?
+      To check syntax only
+      To check syntax and find problems
+    > To check syntax, find problems, and enforce code style
     
+    ? What type of modules does your project use? (Use arrow keys)
+    > JavaScript modules (import/export)
+      CommonJS (require/exports)
+      None of these
+      
+    ? Which framework does your project use?
+      React
+      Vue.js
+    > None of these
+
+    ? Where does your code run? (Press <space> to select, <a> to toggle all, <i> to invert selection)
+     ( ) Browser
+    >(*) Node
+
+    ? How would you like to define a style for your project?
+    > Use a popular style guide
+      Answer questions about your style
+      Inspect your JavaScript file(s)
+
     ? Which style guide do you want to follow?
-      Google
-      Airbnb
-    ❯ Standard
+      Airbnb (https://github.com/airbnb/javascript)
+    > Standard (https://github.com/standard/standard)
+      Google (https://github.com/google/eslint-config-google)
     
     ? What format do you want your config file to be in? (Use arrow keys)
     ❯ JavaScript
@@ -63,8 +82,8 @@
    {
      "scripts": {
        "lint": "eslint -c .eslintrc.js --format codeframe bin src tests",
-       "lint:fix": "eslint --fix -c .eslintrc.js --format codeframe bin src tests",
-       "lint:error-only": "eslint -c .eslintrc.js --quiet --format codeframe bin src tests"
+       "lint:error-only": "eslint -c .eslintrc.js --quiet --format codeframe bin src tests",
+       "lint:fix": "eslint --fix -c .eslintrc.js --format codeframe bin src tests"
      }
    }
    ```
@@ -88,29 +107,35 @@
 
 5. Add the following to the `.eslintrc.js` file.
 
-   ```js
-   module.exports = {
-     root: true,
-     extends: ['standard'],
-     parserOptions: {
-       ecmaVersion: 2017
-     },
-     env: {
-       es6: true
-     },
-     overrides: [
-       {
-         files: ['bin/*.js', 'src/*.js', 'test/*.js'],
-         excludedFiles: 'dist/*.js',
-         rules: {
-           quotes: [2, 'single'],
-           'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-           'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
-         }
-       }
-     ]
-   }
-   ```
+    ```js
+    module.exports = {
+      root: true,
+      'env': {
+        'es6': true,
+        'node': true
+      },
+      extends: ['standard'],
+      'globals': {
+        'Atomics': 'readonly',
+        'SharedArrayBuffer': 'readonly'
+      },
+      parserOptions: {
+        ecmaVersion: 2018,
+        'sourceType': 'module'
+      },
+      overrides: [
+        {
+          files: ['bin/*.js', 'src/*.js', 'test/*.js'],
+          excludedFiles: 'dist/*.js',
+          rules: {
+            quotes: [2, 'single'],
+            'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+            'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
+          }
+        }
+      ]
+    }
+    ```
 
    ESLint defaults to ES5 syntax checking. Using the `emacVersion` option in the `parseOptions` section and `es6` option in the `env` section you can override this and use the latest well supported version of JavaScript.
 
@@ -132,7 +157,7 @@ First install the `babel-eslint` plugin:
 $ npm install --save-dev babel-eslint
 ```
 
-Now add it to the `.bashrc.js` file:
+Now add it to the `.eslintrc.js` file:
 
 ```
 module.exports = {
@@ -154,6 +179,16 @@ Now lets make sure users cannot commit without there code being linted by ESLint
 
 2. Create the `.lintstagedrc.json` file in the project root and add the following entry to it, so that changes are linted before they are committed and any changes are added to the commit.
 
+    Without `Vue`:
+    
+    ```json
+    {
+        "*.js": ["npm run lint:fix --", "git add"]
+    }
+    ```
+    
+    With `Vue`:
+    
     ```json
     {
         "*.{js,vue}": ["npm run lint:fix --", "git add"]
