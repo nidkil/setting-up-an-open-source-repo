@@ -172,6 +172,32 @@ And voila like magic Webstorm now understands the aliases and you can navigate t
 
 - [TypeError: <classname> is not a constructor](https://stackoverflow.com/a/40295288/862907)
 
+- ReferenceError: regeneratorRuntime is not defined
+
+    If you run into this error using `async/await` then you need to add an additional plugin.
+    
+    Install it as development dependency.
+    
+    ```bash
+    $ npm install --save-dev @babel/plugin-transform-runtime
+    ```  
+     
+     and `@babel/runtime` as a production dependency (since it's for the "runtime").
+
+    ```bash
+      npm install --save @babel/runtime
+    ```
+    
+    Configure the plugin in the `.babelrc` file, add the following:
+    
+    ```json
+    {
+      "plugins": ["@babel/plugin-transform-runtime"]
+    }
+    ```
+    
+    See [here](https://babeljs.io/docs/en/babel-plugin-transform-runtime) for more information on the plugins.
+
 ## References
 
 - [Good and extensive example of a Babel configuration file](https://gist.github.com/nodkz/41e189ff22325a27fe6a5ca81df2cb91)
