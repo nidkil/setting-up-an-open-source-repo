@@ -29,6 +29,7 @@
     - Automated testing
 
         - [Jest](sections/4-tooling/jest.md)
+        - [AVA](sections/4-tooling/ava.md)
         - [Coveralls](sections/4-tooling/coveralls.md)
 
     - Commit messages
