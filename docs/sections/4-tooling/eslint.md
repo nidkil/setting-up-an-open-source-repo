@@ -110,18 +110,18 @@
     ```js
     module.exports = {
       root: true,
-      'env': {
-        'es6': true,
-        'node': true
+      env: {
+        es6: true,
+        node: true
       },
       extends: ['standard'],
-      'globals': {
-        'Atomics': 'readonly',
-        'SharedArrayBuffer': 'readonly'
+      globals: {
+        Atomics: 'readonly',
+        SharedArrayBuffer: 'readonly'
       },
       parserOptions: {
         ecmaVersion: 2018,
-        'sourceType': 'module'
+        sourceType: 'module'
       },
       overrides: [
         {
@@ -139,7 +139,7 @@
 
    ESLint defaults to ES5 syntax checking. Using the `emacVersion` option in the `parseOptions` section and `es6` option in the `env` section you can override this and use the latest well supported version of JavaScript.
 
-   The `overrides` section allows you to apply configuration to specifc file types. Here we are defining overrides for the file types specified in the `files` option, It specifies which folders and file types to include and with the `excludedFiles` option which directories and files to excluded. The `rules` section of `overrides` specifies which rules to overrule.
+   The `overrides` section allows you to apply configuration to specific file types. Here we are defining overrides for the file types specified in the `files` option, It specifies which folders and file types to include and with the `excludedFiles` option which directories and files to excluded. The `rules` section of `overrides` specifies which rules to overrule.
 
    You can find more information about configuring ESLint [here](https://eslint.org/docs/user-guide/configuring).
 
