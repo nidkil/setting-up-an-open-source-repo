@@ -25,6 +25,7 @@
 
         - [ESLint](sections/4-tooling/eslint.md)
         - [Prettier](sections/4-tooling/prettier.md)
+        - [JSON Lint](sections/4-tooling/json-lint.md)
 
     - Automated testing
 
