@@ -54,13 +54,14 @@ An additional requirement is that we want everything to work for [Vue single fil
 
     ```json
     {
-      "spaceBeforeFunctionParen": true,
+      "arrowParens": "avoid",
+      "bracketSpacing": true,
       "trailingComma": "none",
       "tabWidth": 2,
       "semi": false,
       "singleQuote": true,
       "endOfLine": "lf",
-      "printWidth": 100
+      "printWidth": 120
     }
     ```
 
@@ -90,7 +91,13 @@ An additional requirement is that we want everything to work for [Vue single fil
 
    The pre commit hook prevents committing if the lint check or linting are not successful. This is a great option to improve development productivity and code quality.
 
-### ESLint and Prettier with Vue CLI 3
+## Prettier and Webstorm
+
+To use Prettier in Webstorm, install [this](https://plugins.jetbrains.com/plugin/10456-prettier) plugin.
+
+Use the Webstorm Reformat action (`Alt+Shift+Cmd+P` on macOS or `Alt+Shift+Ctrl+P` on Windows and Linux) to reformat code with Prettier for a file or a whole directory.
+
+## ESLint and Prettier with Vue CLI 3
 
 If you are using Vue CLI 3 then you are lucky, because it can generate a project with ESLint and Prettier setup. All you have to do is select the option `Linter / Formatter` when creating the project. These instructions are for this situation. The generated `.eslintrc.js`  file looks something like this.
 
