@@ -32,6 +32,15 @@ There are many test frameworks out there, I personally prefer [Jest](https://jes
    ```
 
    You will be asked a number of questions. Most of them speak for them self. One that can save you a lot of initialization time is the type of test environment `node` or `jsdom`. If you are developing a library that does not require a browser functionality choose `node`.
+   
+   Example:
+   
+   ```
+   √ Would you like to use Jest when running "test" script in "package.json"? ... yes
+   √ Choose the test environment that will be used for testing » node
+   √ Do you want Jest to add coverage reports? ... yes
+   √ Automatically clear mock calls and instances between every test? ... no   
+   ```
 
 3. If you did not select the option to run Jest from the `scripts` section of the `package.json` file during initialization, then add the following.
 
@@ -55,18 +64,63 @@ There are many test frameworks out there, I personally prefer [Jest](https://jes
    }
    ```
 
-5. Configure eslint to work with Jest.
+5. Configure Babel to use Jest
+
+   To use Jest with Babel install the required dependencies:
+
+   ```bash
+   $ npm install --save-dev babel-jest
+   ```
+   
+   By default Jest looks for spec files (`*.spec.js`) in all directories of a project except for `node_modules`. This means that it will pickup tests in the `dist` directory. To disable this add the following to the `jest.config.json` file:
+   
+   ```js
+   testPathIgnorePatterns: [
+     "\\\\node_modules\\\\",
+     "\\\\dist\\\\"
+   ],
+   ```
+   
+   Add the following the the `package.json` file if you are developing for Node:
+   
+   ```json
+   {
+     "jest": {
+       "transform": {
+         "^.+\\.jsx?$": "babel-jest"
+       }
+     }
+   }
+   ```
+   
+   Configure Babel to target the current Node version by adding the following to the `babel.config.js` file:
+    
+   ```js
+   module.exports = {
+     "presets": [
+       [
+         "@babel/preset-env", {
+           "targets": {
+             "node": "current"
+           }
+         }
+       ]
+     ]
+   };
+   ```
+    
+6. Configure eslint to work with Jest.
 
    Install the eslint Jest plugin.
 
    ```bash
-   $ npm install -D eslint-plugin-jest
+   $ npm install -save-dev eslint-plugin-jest
    ```
 
    Create a `test` directory in the main project directory.
 
    ```bash
-   mkdir tests
+   mkdir test
    ```
 
    In the `test` directory create a `.eslintrc.js` file specifically for the tests and add the following contents.
@@ -74,10 +128,10 @@ There are many test frameworks out there, I personally prefer [Jest](https://jes
    ```js
    module.exports = {
      extends: ['plugin:jest/recommended'],
+     plugins: ['jest'],
      overrides: [
        {
-         files: ['tests/*.js'],
-         plugins: ['jest'],
+         files: ['test/*.js'],
          rules: {
            'jest/no-disabled-tests': 'warn',
            'jest/no-focused-tests': 'error',
@@ -90,9 +144,9 @@ There are many test frameworks out there, I personally prefer [Jest](https://jes
    }
    ```
 
-   This makes use of eslint's  cascading configuration. The configuration cascade works by using the closest .eslintrc file to the file being linted as the highest priority, then any configuration files in the parent directory, and so on.
+   This makes use of eslint's cascading configuration. The configuration cascade works by using the closest .eslintrc file to the file being linted as the highest priority, then any configuration files in the parent directory, and so on.
 
-6. <a name="step-6">Update pre commit hooks in `.huskyrc.json`, so that test are also run before committing.</a>
+7. <a name="step-6">Update pre commit hooks in `.huskyrc.json`, so that test are also run before committing.</a>
 
    ```json
    {
@@ -135,3 +189,14 @@ module.exports = {
 ```
 
 And voila like magic Webstorm now understands the aliases and you can navigate them with Ctrl+B and code completion works. O yeah!
+
+### Getting rid of 'Unresolved function or method expect()'
+
+Webstorm will display a warning for Jest functions and methods. To get ride of these warnings you have to add the Jest Typescript definition to Webstorm.
+
+- File > Settings (Ctrl+Alt+S) > Languages & Frameworks > Javascript > Libraries
+- Click the 'Download...'
+- Type 'Jest'
+- Select and click 'Download & Install'
+
+Now Webstorm will recognize Jest functions and methods.
