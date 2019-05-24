@@ -15,7 +15,7 @@ If you have ever done this process manually, then you know what a big deal and t
 1. Install `release-it` using npm.
 
     ```bash
-    $ npm install --save-dev release-it
+    $ npm install --save-dev release-it @release-it/conventional-changelog
     ```
 
 2. Add `release-it` to the `scripts` section of the `package.json` file.
@@ -23,7 +23,7 @@ If you have ever done this process manually, then you know what a big deal and t
     ```json
     {
       "scripts": {
-        "release": "release-it --verbose"
+        "release": "env-cmd -f ./.env.local release-it --verbose"
       }
     }
     ```
@@ -78,7 +78,7 @@ If you have ever done this process manually, then you know what a big deal and t
 
         [1] Always select the minimum number of permissions to limit the damage if the token is ever exposed. Only check the sub permissions, never the top level groups!
 
-        [2] The `.env.local` file MUST never be published to GitHub or NPM. Mmake sure `.env.local` is in the `.gitignore` file, as NPM will also use this as ignore file if the `.npmignore` file does not exist.
+        [2] The `.env.local` file MUST never be published to GitHub or NPM. Make sure `.env.local` is in the `.gitignore` file, as NPM will also use this as ignore file if the `.npmignore` file does not exist.
 
     **Pro tip**: you could go directly to the token page and generate a token by opening up a browser and going to [https://github.com/settings/tokens](https://github.com/settings/tokens)! But now you know how to get there through the settings :-)
 
